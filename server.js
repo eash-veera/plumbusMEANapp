@@ -22,7 +22,8 @@ app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
 //Set Static folder
-app.use(express.static(path.join(__dirname, 'client')));
+app.use(express.static(path.join(__dirname, 'plumbus-app')));
+app.use(express.static(path.join(__dirname, 'plumbus-app/src')));
 
 //Body Parser MW
 app.use(bodyParser.json());
